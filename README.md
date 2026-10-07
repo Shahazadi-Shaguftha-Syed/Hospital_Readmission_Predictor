@@ -43,17 +43,21 @@ itself is uncertain, so a human stays in the loop for the calls that matter.
 
 ## Dataset
 
-**AV Healthcare Analytics II (Analytics Vidhya)** — ~318,000 hospital encounters across ~92,000 unique patients, with admission details such as department, ward type, severity of illness, type of admission, age group, and admission deposit.
+**AV Healthcare Analytics II** (Analytics Vidhya) — ~318,000 hospital encounters across
+~92,000 unique patients, with admission details such as department, ward type,
+severity of illness, type of admission, age group, and admission deposit.
 
-The original dataset has no dates and no readmission label, so the following were added on top of it:
+The original dataset has no dates and no readmission label, so the following were
+added on top of it:
 
-Synthetic admission/discharge dates — generated for each encounter; not real hospital records.
-readmitted_30_days target — derived from the gap between a patient's consecutive encounters on that synthetic timeline.
-Admission-history features — previous_encounters, previous_30d/90d/365d_encounters, previous_avg_los, previous_readmission_count, etc., computed from each patient's own encounter history.
+- **Synthetic admission/discharge dates** — generated for each encounter; not real hospital records.
+- **`readmitted_30_days` target** — derived from the gap between a patient's consecutive encounters on that synthetic timeline.
+- **Admission-history features** — `previous_encounters`, `previous_30d/90d/365d_encounters`, `previous_avg_los`, `previous_readmission_count`, etc., computed from each patient's own encounter history.
 
-**Limitation:** because the dates and target are synthetic, model results here demonstrate the pipeline and approach, not real clinical performance.
+> **Limitation:** because the dates and target are synthetic, model results here
+> demonstrate the pipeline and approach, not real clinical performance.
 
-**Source:** Analytics Vidhya — Healthcare Analytics II hackathon dataset.
+Source: Analytics Vidhya — Healthcare Analytics II hackathon dataset.
 
 ---
 
