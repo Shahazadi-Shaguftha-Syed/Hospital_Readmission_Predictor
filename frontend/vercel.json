@@ -1,0 +1,7 @@
+{
+  "rewrites": [
+    { "source": "/predict/:path*", "destination": "https://hospital-readmission-predictor-ggle.onrender.com/predict/:path*" },
+    { "source": "/model/:path*", "destination": "https://hospital-readmission-predictor-ggle.onrender.com/model/:path*" },
+    { "source": "/health", "destination": "https://hospital-readmission-predictor-ggle.onrender.com/health" }
+  ]
+}
